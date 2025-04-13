@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:white;">
+
+<h1 style = "font-size:100px">This is a heading</h1>
+  
+<p style="background-color:tomato;
+          color:blue;
+          font-family:verdana;
+          font-size:300%;
+          text-align:center;">This is a paragraph.
+</p>
+    
+          
+          <p style="font-size:10px;">এটা 10px ফন্ট</p>
+          <p style="font-size:20px;">এটা 20px ফন্ট</p>
+          <p style="font-size:50px;">এটা 50px ফন্ট</p>
+          <p style="font-size:100px;">এটা 100px ফন্ট</p>
+
+</body>
+</html>
+
+
