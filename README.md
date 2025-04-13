@@ -1,4 +1,4 @@
-<h3 style = "font-size:10px; text-allign:center;"> HTML_Learning </h3>
+<h3 style = "font-size:10px; text-align:center;"> HTML_Learning </h3>
 
 
 | Tag     | Description                            |
