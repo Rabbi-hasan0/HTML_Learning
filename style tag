@@ -8,7 +8,11 @@
           color:blue;
           font-family:verdana;
           font-size:300%;
-          text-align:center;">This is a paragraph.
+          text-align:center;
+          border: 10px solid back;"   <!--border: [width] [type] [color]-->
+>
+
+This is a paragraph.
 </p>
     
           
