@@ -1,0 +1,71 @@
+/*
+In html we can add css 3 way. In blew these three way given as example;
+*/
+
+1. Inline css:
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1 style="color:blue;">A Blue Heading</h1>
+<p style="color:red;">A red paragraph.</p>
+</body>
+</html>
+
+
+<!-- ----------------------- -->
+2. Internal css
+
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+  body {background-color: powderblue;}
+  h1 {
+     color: blue;
+     text-align:center;
+     border:5px dotted #AFAE00;
+  }
+  p    {color: red;}
+ </style>
+</head>
+
+<body>
+<h1> Hello World </h1>
+<p> Hello World </p>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+
+<!-- ----------------------- -->
+3. External css:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+css page:
+____________________________________
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+____________________________________
+
