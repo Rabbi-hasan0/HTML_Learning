@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+--------------------------------------------------------------------------------------
+1. image link:
+<a href="default.asp">
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a><hr>
+--------------------------------------------------------------------------------------
+2.mail link:
+<a href="mailto:someone@example.com">Send email</a> <hr>
+--------------------------------------------------------------------------------------
+3.button link:
+<button> <a href = "default.asp"> HTML Tutorial </a> </button> <hr>
+<button onclick="document.location='default.asp'">HTML Tutorial</button> <hr>
+<button onclick="if(confirm('Are you sure?')) location.href='default.asp';">HTML Tutorial</button>
+<hr>
+
+//make button with css:
+<a href="default.asp" style="padding: 10px; background: blue; color: white; text-decoration: none; border-radius: 5px;">HTML Tutorial</a>
+<button onclick="alert('Hello world!')">Click me</button>
+--------------------------------------------------------------------------------------
+4. Bookmark link:
+<p><a href="#C4">Jump to Chapter 4</a></p>
+<p><a href="#aseporo">Jump to Chapter 6</a></p>
+
+<h2>Chapter 1</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 2</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 3</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2 id="C4">Chapter 4</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 5</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2 id = "aseporo">Chapter 6</h2>
+<p>This chapter explains ba bla bla</p>
+--------------------------------------------------------------------------------------
+5. Bookmark link another page:
+<a href="location#value"> text </a>
+--------------------------------------------------------------------------------------
+</body>
+</html>
+
