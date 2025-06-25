@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mouse & Click Swirl</title>
+  <title>Dual Mouse Animation</title>
   <style>
     html, body {
       margin: 0;
@@ -32,22 +32,30 @@
     let particles = [];
 
     class Particle {
-      constructor(x, y, isClick = false) {
+      constructor(x, y, type = "move") {
         this.x = x;
         this.y = y;
-        this.radius = isClick ? (Math.random() * 20 + 20) : (Math.random() * 10 + 5);
-        this.angle = Math.random() * 2 * Math.PI;
-        this.speed = Math.random() * (isClick ? 3 : 1) + 0.5;
-        this.color = isClick
-          ? `hsla(${Math.random() * 360}, 100%, 60%, 0.6)`
-          : `hsla(${Math.random() * 360}, 100%, 80%, 0.15)`;
-        this.life = isClick ? 100 : 30;
+        this.type = type;
+
+        if (type === "move") {
+          this.radius = Math.random() * 6 + 2;
+          this.speed = 0.5;
+          this.life = 30;
+          this.color = `rgba(100, 150, 255, 0.1)`;
+          this.angle = Math.random() * 2 * Math.PI;
+        } else if (type === "click") {
+          this.radius = Math.random() * 12 + 8;
+          this.speed = Math.random() * 3 + 1;
+          this.life = 80;
+          this.color = `hsl(${Math.random() * 360}, 100%, 60%)`;
+          this.angle = Math.random() * 2 * Math.PI;
+        }
       }
 
       update() {
         this.x += Math.cos(this.angle) * this.speed;
         this.y += Math.sin(this.angle) * this.speed;
-        this.radius *= 0.95;
+        this.radius *= 0.96;
         this.life--;
       }
 
@@ -59,22 +67,22 @@
       }
     }
 
-    // swirl follows mouse movement (gentle effect)
+    // Mouse move: trailing glow
     document.addEventListener("mousemove", (e) => {
-      for (let i = 0; i < 3; i++) {
-        particles.push(new Particle(e.clientX, e.clientY));
+      for (let i = 0; i < 2; i++) {
+        particles.push(new Particle(e.clientX, e.clientY, "move"));
       }
     });
 
-    // bigger effect on click
+    // Mouse click: burst explosion
     document.addEventListener("click", (e) => {
-      for (let i = 0; i < 25; i++) {
-        particles.push(new Particle(e.clientX, e.clientY, true));
+      for (let i = 0; i < 35; i++) {
+        particles.push(new Particle(e.clientX, e.clientY, "click"));
       }
     });
 
     function animate() {
-      ctx.fillStyle = "rgba(255, 255, 255, 0.15)";
+      ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particles = particles.filter(p => p.life > 0);
