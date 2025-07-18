@@ -41,3 +41,22 @@ section.mid {
   align-items: center;     /* vertical center */
   height: 45px;
 }
+
+h2 {
+    text-align: center;
+    border-bottom: 5px solid rgb(68, 170, 68);
+    margin: auto;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+h2:hover {
+    width: 200px;
+    border-radius: 3%;
+    border: none;
+    border-left:4px solid rgb(68, 170, 68);
+    border-right:4px solid rgb(68, 170, 68);
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
